@@ -32,7 +32,13 @@ In this section, we have used a dataset of 2062 images of ASL digit hand symbols
 
 ![DMS.png](Images/DMS.png)
 
+
+### New Model Used - CNN: 
+A convolutional layer contains a set of parameters that need to be learned. Each filter is convolved with the input volume to compute an activation map. The activation map is slid across the width and height of the input in a "pool size" set in the model architecture with the weights computed at every spatial position.
+
+
 ### Digits Model Validation:
+After 100 epochs, validation accuracy at 98.5%+ and validation loss at 0.06%.
 
 ![accloss.png](Images/accloss.png)
 
@@ -54,46 +60,47 @@ In this section, we have combined the two dataset ASL digit and alphabet hand sy
 
 Finally, we used the same structure and compile as Digits model.
 
+### Model Validation:
+After 150 epochs, validation accuracy at 97.6%+ and validation loss at 24.6%.
+
+![accloss2.png](Images/accloss2.png)
+
+### Model Consion Matrix:
+
+![CM1.png](Images/CM1.png)
 
 ## Model Testing with Additional Images:
 
 ### Image # 1
 
-We have run our model giving it a new input to expect the selected image as output, the our model provided...
+We have run our model giving it a new input/image to expect the selected image an output, the our model provided...
 
-![cartoonhand.png](input/New_Pictures/cartoonhand.png)
+![image1.png](Images/image1.png)
 
 ### Image # 2
 
 We have run our model giving it a new input to expect the selected image as output, the our model provided...
 
-![fourfingeredhand.jpg](input/New_Pictures/fourfingeredhand.jpg)
+![image2.png](Images/image2.png)
 
 ### Image # 3
 
 We have run our model giving it a new input to expect the selected image as output, the our model provided...
 
-![mannequinhand.jpg](input/New_Pictures/mannequinhand.jpg)
+![image3.png](Images/image3.png)
 
 ### Image # 4
 
 We have run our model giving it a new input to expect the selected image as output, the our model provided...
 
-![realitysimpsonhand.jpg](input/New_Pictures/realitysimpsonhand.jpg)
+![image4.png](Images/image4.png)
 
-### Image # 5
-
-We have run our model giving it a new input to expect the selected image as output, the our model provided...
-
-![skeletonhandimages.png](input/New_Pictures/skeletonhandimages.png)
-
-
-## Model Valuation:
 
 ## Learnings:
 
+- Accuracy of data - labelling / resolution of data - integrity of data
 - Significant difference in model accuracy output between running on own computer vs running on Google Colab.
 - Colab run models may not be compatible to your computer (not backward version compatible).
 - Adjusting of final layer output classes.
-- Diagonal compile…..
+- Diagonally stack two data frames to create one data frame without losing any data.
 - Early stopping of epochs
