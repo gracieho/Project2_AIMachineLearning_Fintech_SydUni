@@ -14,10 +14,10 @@ Train a machine learning model to successfully recognise American Sign Language 
 
 ## Methodology:
 
-- Build initial Machine Learning model to successfully recognises ASL digit hand signals. (10 symbols).
+- Build initial Machine Learning model to successfully recognise ASL digit hand signals. (10 symbols).
 
 - Determine if the model can be re-fit for both ASL alphabet & digit hand signals. 
-(35 symbols)
+(34 symbols.  The symbols for J and Z are excluded as they are movement based.)
 
 - Test additional hand pictures to see how model responds to other hand shapes.
 
