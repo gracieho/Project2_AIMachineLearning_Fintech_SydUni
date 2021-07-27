@@ -21,10 +21,13 @@ Train a machine learning model to successfully recognise American Sign Language 
 
 - Test additional hand pictures to see how model responds to other hand shapes.
 
+## Instructions:
+
+In order to run the model, you will need to create an 'input' folder and add 4 datasets (X.npy, Y.npy, sign_mnist_test.csv and sign_mnist_train.csv) in it. Then under the input folder, create a subfolder called New_Pictures, and put the additional pictures in that new folder.
 
 ## Digits Model:
 
-In this section, we have used a dataset of 2062 images of ASL digit hand symbols, 4 x 64 pixel black and white images and 80/20 train vs test split.
+In this section, we have used a dataset of 2062 images of ASL digit hand symbols, 64 x 64 pixel black and white images and 80/20 train vs test split.
 
 ![DM.png](Images/DM.png)
 
@@ -42,7 +45,7 @@ After 100 epochs, validation accuracy at 98.5%+ and validation loss at 0.06%.
 
 ![accloss.png](Images/accloss.png)
 
-### Digits Model Consion Matrix:
+### Digits Model Confusion Matrix:
 
 ![CM.png](Images/CM.png)
 
@@ -65,7 +68,7 @@ After 150 epochs, validation accuracy at 97.6%+ and validation loss at 24.6%.
 
 ![accloss3.png](Images/accloss3.png)
 
-### Model Consion Matrix:
+### Model Confusion Matrix:
 
 ![CM3.png](Images/CM3.png)
 
@@ -103,9 +106,10 @@ We ran our model by providing it a new input/image and expected a particular out
 
 ## Learnings:
 
-- Integrity of data - encountered problems with labelling / resolution of data and resulting model output
-- ignificant difference in model accuracy output between running on our own computer vs running on Google Colab.
-- Colab run models may not be compatible to your computer. Also encountered issues with saving datasets and GPU usage. 
-- Reconsider flip and rotate image augmentation, these may have confused the model and created some erroneous classifications.
-- Adjustment of epochs when running the model.
-
+Data integrity - We encountered some issues with the labelling and ordering of data which gave us incorrect output on the trained model. In order to rectify it, we had to adjust our code accordingly to align with the dataset. We also realised the low resolution version of the images perhaps made it difficult for the model to accurately recognize the images. One of the key learnings for us was to ensure that we should go through our dataset quite rigorously before using it for machine learning.
+ 
+Significant difference in model accuracy output between running on own computer vs running on Google Colab - this was perhaps due to Google Colab using an advanced version of Machine Learning software available
+ 
+Colab run models may not be compatible to your computer - we struggled to run notebooks that were created on Jupyter Lab and encountered compatibility issues when we tried to upload it on Colab
+ 
+Early stopping of epochs - When we tried to train model3, we realised that after a particular number of epochs, the validation-accuracy score started to decrease and the losses started to increase. Through trial and error, we had to stop at a particular number to prevent the model from overfitting.
