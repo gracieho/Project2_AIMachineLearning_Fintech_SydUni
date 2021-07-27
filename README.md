@@ -41,7 +41,7 @@ A convolutional layer contains a set of parameters that need to be learned. Each
 
 
 ### Digits Model Validation:
-After 100 epochs, validation accuracy at 98.5%+ and validation loss at 0.06%.
+After 100 epochs, validation accuracy at 97%+ and validation loss at 11%.
 
 ![accloss.png](Images/accloss.png)
 
@@ -64,13 +64,22 @@ In this section, we have combined the two dataset ASL digit and alphabet hand sy
 Finally, we used the same structure and compile as Digits model.
 
 ### Model Validation:
-After 150 epochs, validation accuracy at 97.6%+ and validation loss at 24.6%.
+After 150 epochs, validation accuracy at 97%+ and validation loss at 40%.
 
 ![accloss3.png](Images/accloss3.png)
 
 ### Model Confusion Matrix:
 
 ![CM3.png](Images/CM3.png)
+
+The confusion matrix indicates there are a few areas where the model has issues predicting the correct classification:
+ - Actual value 12 (N) gets confused with predicted value 11 (M) (confusion matrix score 41).
+ - Actual value 19 (U) gets confused with predicted value 16 (R) (cm score 23).
+ - Actual value 20 (V) gets confused with predicted value 19 (U) (cm score 19).
+ - Actual value 9 (K) gets confused with predicted value 19 (Y) (cm score 19).
+ - Actual value 9 (K) gets confused with predicted value 7 (H) (score 21).
+On reviewing the hand signals for these outputs, there are some similarities between N and M, and U and R as well as V and U.  
+The confusion between K and Y, and K and H may be due to the image augmentation rotations and flips used.  A future test would be to remove the image augmentation rotations and flips and retest the model.
 
 ## Testing Our Model with Additional Images:
 
