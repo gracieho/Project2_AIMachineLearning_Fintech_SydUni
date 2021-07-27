@@ -53,7 +53,7 @@ After 100 epochs, validation accuracy at 97%+ and validation loss at 11%.
 
 In this section, we have first used a dataset of 34,627 images of ASL alphabet hand symbols, 28 x 28 pixel black and white images, in csv format, and the train vs test split were 80/20.
 
-Then, we had to transform the dataset as required with Pixel values adjusted from 0-255 to between 0-1, One hot encoding of y class, image augmentation (features standardisation to rebalance lighter or darker images, ZCA whitening which highlighted the image outlines, random rotations, flips, and shifts. We also resized images to 64 x 64 using the Pillow function.
+Then, we had to transform the dataset as required with Pixel values adjusted from 0-255 to between 0-1, One hot encoding of y class, image augmentation (features standardisation to rebalance lighter or darker images, ZCA whitening which highlighted the image outlines, random rotations, flips, and shifts). We also resized images to 64 x 64 pixel values using the Pillow function.
 
 ![ALD1.png](Images/ALD1.png) ![ALD2.png](Images/ALD2.png) 
 
