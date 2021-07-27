@@ -78,6 +78,7 @@ The confusion matrix indicates there are a few areas where the model has issues 
  - Actual value 20 (V) gets confused with predicted value 19 (U) (cm score 19).
  - Actual value 9 (K) gets confused with predicted value 19 (Y) (cm score 19).
  - Actual value 9 (K) gets confused with predicted value 7 (H) (score 21).
+
 On reviewing the hand signals for these outputs, there are some similarities between N and M, and U and R as well as V and U.  
 The confusion between K and Y, and K and H may be due to the image augmentation rotations and flips used.  A future test would be to remove the image augmentation rotations and flips and retest the model.
 
