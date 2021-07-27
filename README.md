@@ -23,7 +23,7 @@ Train a machine learning model to successfully recognise American Sign Language 
 
 ## Instructions:
 
-In order to run the model, you will need to create an 'input' folder and add 4 datasets (X.npy, Y.npy, sign_mnist_test.csv and sign_mnist_train.csv) in it. Then under the input folder, create a subfolder called New_Pictures, and put the additional pictures in that new folder.
+In order to run the model, you will need to create an 'input' folder and add 4 datasets (X.npy, Y.npy, sign_mnist_test.csv and sign_mnist_train.csv) in it. Then under the input folder, create a subfolder called 'New_Pictures', and put the additional pictures in that new folder.
 
 ## Digits Model:
 
