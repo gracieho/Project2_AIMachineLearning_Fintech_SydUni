@@ -63,44 +63,49 @@ Finally, we used the same structure and compile as Digits model.
 ### Model Validation:
 After 150 epochs, validation accuracy at 97.6%+ and validation loss at 24.6%.
 
-![accloss2.png](Images/accloss2.png)
+![accloss3.png](Images/accloss3.png)
 
 ### Model Consion Matrix:
 
-![CM1.png](Images/CM1.png)
+![CM3.png](Images/CM3.png)
 
-## Model Testing with Additional Images:
+## Testing Our Model with Additional Images:
 
 ### Image # 1
 
-We have run our model giving it a new input/image to expect the selected image an output, the our model provided...
+We ran our model by providing it a new input/image and expected a particular output; our model provided...
 
 ![image1.png](Images/image1.png)
 
 ### Image # 2
 
-We have run our model giving it a new input to expect the selected image as output, the our model provided...
+We ran our model by providing it a new input/image and expected a particular output; our model provided...
 
 ![image2.png](Images/image2.png)
 
 ### Image # 3
 
-We have run our model giving it a new input to expect the selected image as output, the our model provided...
+We ran our model by providing it a new input/image and expected a particular output; our model provided...
 
 ![image3.png](Images/image3.png)
 
 ### Image # 4
 
-We have run our model giving it a new input to expect the selected image as output, the our model provided...
+We ran our model by providing it a new input/image and expected a particular output; our model provided...
 
 ![image4.png](Images/image4.png)
 
+### Image # 5
+
+We ran our model by providing it a new input/image and expected a particular output; our model provided...
+
+![image5.png](Images/image5.png)
 
 ## Learnings:
 
-- Accuracy of data - labelling / resolution of data - integrity of data
-- Significant difference in model accuracy output between running on own computer vs running on Google Colab.
-- Colab run models may not be compatible to your computer (not backward version compatible).
-- Adjusting of final layer output classes.
-- Diagonally stack two data frames to create one data frame without losing any data.
-- Early stopping of epochs
+- Integrity of data - encountered problems with labelling / resolution of data and resulting model output
+- ignificant difference in model accuracy output between running on our own computer vs running on Google Colab.
+- Colab run models may not be compatible to your computer. Also encountered issues with saving datasets and GPU usage. 
+- Reconsider flip and rotate image augmentation, these may have confused the model and created some erroneous classifications.
+- Adjustment of epochs when running the model.
+
