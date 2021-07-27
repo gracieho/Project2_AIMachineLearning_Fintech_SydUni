@@ -83,43 +83,44 @@ On reviewing the hand signals for these outputs, there are some similarities bet
 The confusion between K and Y, and K and H may be due to the image augmentation rotations and flips used.  A future test would be to remove the image augmentation rotations and flips and retest the model.
 
 ## Testing Our Model with Additional Images:
+We further tested our model by providing it with additional input / images in new formats which the model had not previously seen.
 
 ### Image # 1
 
-We ran our model by providing it a new input/image and expected a particular output; our model provided...
-
 ![image1.png](Images/image1.png)
+
+The image of a cartoon hand was expected to output a 5, however the model outputted A.  This could be due to the model mistaking the chubby fingers as a closed fist, rather than outstretched fingers.
 
 ### Image # 2
 
-We ran our model by providing it a new input/image and expected a particular output; our model provided...
-
 ![image2.png](Images/image2.png)
+
+The drawn skeleton hand was in a style very unfamiliar to the model.  Rather than outputting a 5 as expected, the model outputted a V.
 
 ### Image # 3
 
-We ran our model by providing it a new input/image and expected a particular output; our model provided...
-
 ![image3.png](Images/image3.png)
+
+The four fingered hand was mistaken by the model to be a Q, rather than the 4 output expected.
 
 ### Image # 4
 
-We ran our model by providing it a new input/image and expected a particular output; our model provided...
-
 ![image4.png](Images/image4.png)
+
+The mannequin hand was expected to ouput a F.  The model outputted a C.  This was considered a fairly close outcome, as the key difference between an F and a C is in the size of gap between the thumb and index finger.
 
 ### Image # 5
 
-We ran our model by providing it a new input/image and expected a particular output; our model provided...
-
 ![image5.png](Images/image5.png)
+
+The O handshape was correctly interpreted by the model.  This was pleasing, as many of the training images showed the hand signal from a front position, where the O shape in the fingers was not very clear.
 
 ## Learnings:
 
 Data integrity - We encountered some issues with the labelling and ordering of data which gave us incorrect output on the trained model. In order to rectify it, we had to adjust our code accordingly to align with the dataset. We also realised the low resolution version of the images perhaps made it difficult for the model to accurately recognize the images. One of the key learnings for us was to ensure that we should go through our dataset quite rigorously before using it for machine learning.
  
-Significant difference in model accuracy output between running on own computer vs running on Google Colab - this was perhaps due to Google Colab using an advanced version of Machine Learning software available
+Significant difference in model accuracy output between running on own computer vs running on Google Colab - this was perhaps due to Google Colab using more advanced versions of Machine Learning software & imports available.
  
-Colab run models may not be compatible to your computer - we struggled to run notebooks that were created on Jupyter Lab and encountered compatibility issues when we tried to upload it on Colab
+Colab run models may not be compatible to your computer - we struggled to run notebooks that were created on Jupyter Lab and encountered compatibility issues when we tried to upload it on Colab.
  
-Early stopping of epochs - When we tried to train model3, we realised that after a particular number of epochs, the validation-accuracy score started to decrease and the losses started to increase. Through trial and error, we had to stop at a particular number to prevent the model from overfitting.
+Early stopping of epochs - When we tried to train model3 (alphabet & digits model), we realised that after a particular number of epochs, the validation-accuracy score started to decrease and the losses started to increase. Through trial and error, we found stopping at an earlier number of epochs would prevent the model from overfitting.
