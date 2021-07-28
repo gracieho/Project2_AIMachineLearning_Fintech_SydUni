@@ -132,7 +132,7 @@ Early stopping of epochs - When we tried to train model3 (alphabet & digits mode
 
 For Confusion Matrix, mapping of output value to alphabet and digits (note the numbers are not in chronological order):
 
-Output Value : Output  
+Output # : Value  
 0 : A,   
 1 : B,   
 2 : C,   
