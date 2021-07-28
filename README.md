@@ -81,6 +81,7 @@ The confusion matrix indicates there are a few areas where the model has issues 
 
 On reviewing the hand signals for these outputs, there are some similarities between N and M, and U and R as well as V and U.  
 The confusion between K and Y, and K and H may be due to the image augmentation rotations and flips used.  A future test would be to remove the image augmentation rotations and flips and retest the model.
+
 (Refer Appendix - for mapping of confusion matrix values to alphabet and digits.)
 
 ## Testing Our Model with Additional Images:
