@@ -81,6 +81,7 @@ The confusion matrix indicates there are a few areas where the model has issues 
 
 On reviewing the hand signals for these outputs, there are some similarities between N and M, and U and R as well as V and U.  
 The confusion between K and Y, and K and H may be due to the image augmentation rotations and flips used.  A future test would be to remove the image augmentation rotations and flips and retest the model.
+(Refer Appendix - for mapping of confusion matrix values to alphabet and digits.)
 
 ## Testing Our Model with Additional Images:
 We further tested our model by providing it with additional input / images in new formats which the model had not previously seen.
@@ -124,3 +125,45 @@ Significant difference in model accuracy output between running on own computer 
 Colab run models may not be compatible to your computer - we struggled to run notebooks that were created on Jupyter Lab and encountered compatibility issues when we tried to upload it on Colab.
  
 Early stopping of epochs - When we tried to train model3 (alphabet & digits model), we realised that after a particular number of epochs, the validation-accuracy score started to decrease and the losses started to increase. Through trial and error, we found stopping at an earlier number of epochs would prevent the model from overfitting.
+
+
+## Appendix:
+
+For Confusion Matrix, mapping of output value to alphabet and digits (note the numbers are not in chronological order):
+
+Output Value : Output
+0 : A
+1 : B
+2 : C
+3 : D
+4 : E
+5 : F
+6 : G
+7 : H
+8 : I
+9 : K
+10 : L
+11 : M
+12 : N
+13 : O
+14 : P
+15 : Q
+16 : R
+17 : S
+18 : T
+19 : U
+20 : V
+21 : W
+22 : X
+23 : Y
+24 : 9
+25 : 0
+26 : 7
+27 : 6
+28 : 1
+29 : 8
+30 : 4
+31 : 3
+32 : 2
+33 : 5
+
