@@ -134,8 +134,11 @@ For Confusion Matrix, mapping of output value to alphabet and digits (note the n
 
 Output Value : Output
 0 : A, 
+
 1 : B, 
+
 2 : C, 
+
 3 : D, 
 4 : E, 
 5 : F, 
